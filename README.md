@@ -12,7 +12,17 @@ Este documento detalla el funcionamiento del script `conversor.sh`, su configura
 curl https://rclone.org/install.sh | sudo bash
 ```
 
-### 1.2 Configuración con Dropbox
+## 1.2 Crear usuario
+
+```bash
+# Create a dedicated user for the service
+sudo useradd -m -s /bin/bash usuario
+
+# Set a strong password for the user
+sudo passwd usuario
+```
+
+### 1.3 Configuración con Dropbox
 
 Ejecuta:
 
@@ -43,6 +53,8 @@ rclone lsd dropbox:
 ## 2. Instalación de Marker en un Entorno Virtual
 
 ### 2.1 Instalación de Python y Virtualenv
+
+- **IMPORTANTE**: Hacer con privilegios
 
 ```bash
 sudo apt update && sudo apt install python3 python3-venv -y
