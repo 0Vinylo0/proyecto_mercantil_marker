@@ -1,17 +1,22 @@
-ExecStart=/usr/local/bin/conversor.sh
-
 [Unit]
-Description=Monitoreo de la carpeta input en Drive
+Description=Monitoreo de la carpeta input en Dropbox
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=/bin/bash -c 'source /root/env/bin/activate && exec /usr/local/bin/conversor.sh'
+User=usuario
+Group=usuario
+ExecStart=/bin/bash -c 'source /home/usuario/env/bin/activate && exec /usr/local/bin/conversor.sh'
 Restart=always
-User=root
-WorkingDirectory=/root
-Environment="VIRTUAL_ENV=/root/venv_drive"
-Environment="PATH=/root/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+WorkingDirectory=/home/usuario
+Environment="VIRTUAL_ENV=/home/usuario/venv_drive"
+Environment="PATH=/home/usuario/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+# Security enhancements
+ProtectSystem=strict
+PrivateTmp=yes
+ReadWritePaths=/home/usuario/temp /home/usuario/output /home/usuario/error_log /home/usuario/completed
+NoNewPrivileges=yes
+ProtectHome=read-only
 
 [Install]
 WantedBy=multi-user.target
