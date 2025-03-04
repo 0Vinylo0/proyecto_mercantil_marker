@@ -65,6 +65,7 @@ sudo apt update && sudo apt install python3 python3-venv -y
 - **IMPORTANTE**: Hacer con usuario usuario
 
 ```bash
+su usuario
 python3 -m venv env
 source env/bin/activate
 ```
