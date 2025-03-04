@@ -62,9 +62,11 @@ sudo apt update && sudo apt install python3 python3-venv -y
 
 ### 2.2 Creación del Entorno Virtual
 
+- **IMPORTANTE**: Hacer con usuario usuario
+
 ```bash
-python3 -m venv venv_drive
-source venv_drive/bin/activate
+python3 -m venv env
+source env/bin/activate
 ```
 
 ### 2.3 Instalación de Marker
