@@ -9,7 +9,7 @@ Group=usuario
 ExecStart=/bin/bash -c 'source /home/usuario/env/bin/activate && exec /usr/local/bin/conversor.sh'
 Restart=always
 WorkingDirectory=/home/usuario
-Environment="VIRTUAL_ENV=/home/usuario/venv_drive"
+Environment="VIRTUAL_ENV=/home/usuario/env"
 Environment="PATH=/home/usuario/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 # Security enhancements
 ProtectSystem=strict
