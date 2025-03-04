@@ -78,7 +78,7 @@ marker_single --help
 - Sube archivos procesados de vuelta a Dropbox.
 - Elimina los archivos de la carpeta `input` en Dropbox.
 - Se ejecuta en bucle infinito cada 30 segundos.
-- **IMPORTANTE**: Si utilizas otro usuario cambiralo en el servicio en conversor.service, por el usuario
+- **IMPORTANTE**: Si utilizas otro usuario cambiralo en el servicio en conversor.service, por el usuario asi como sus rutas absolutas
 - La estructura en dropbox que se utiliza para el script es:
   ```
   proyecto-mercantil/
