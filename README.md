@@ -9,6 +9,7 @@ Este documento detalla el funcionamiento del script `conversor.sh`, su configura
 ### 1.1 Instalación de Rclone
 
 ```bash
+su - root
 sudo apt install rclone 
 ```
 
@@ -57,7 +58,8 @@ rclone lsd dropbox:
 - **IMPORTANTE**: Hacer con privilegios
 
 ```bash
-sudo apt update && sudo apt install python3 python3-venv -y
+su - root
+sudo apt update && sudo apt install python3 python3-venv git -y
 ```
 
 ### 2.2 Creación del Entorno Virtual
@@ -65,7 +67,7 @@ sudo apt update && sudo apt install python3 python3-venv -y
 - **IMPORTANTE**: Hacer con usuario usuario
 
 ```bash
-su usuario
+su - usuario
 python3 -m venv env
 source env/bin/activate
 ```
@@ -106,7 +108,9 @@ marker_single --help
 
 1. Copia `conversor.sh` a `/usr/local/bin/`:
    ```bash
-   sudo cp conversor.sh /usr/local/bin/conversor.sh
+   su - root
+   git clone https://github.com/0Vinylo0/proyecto_mercantil_marker
+   sudo cp proyecto_mercantil_marker/conversor.sh /usr/local/bin/conversor.sh
    sudo chmod +x /usr/local/bin/conversor.sh
    ```
 2. Crear las carpetas con:
@@ -122,7 +126,7 @@ marker_single --help
 Copia el archivo `conversor.service` a `/etc/systemd/system/`:
 
 ```bash
-sudo cp conversor.service /etc/systemd/system/conversor.service
+sudo cp proyecto_mercantil_marker/conversor.service /etc/systemd/system/conversor.service
 ```
 
 ### 4.2 Habilitar y Ejecutar el Servicio
