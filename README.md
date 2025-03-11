@@ -132,6 +132,7 @@ sudo cp proyecto_mercantil_marker/conversor.service /etc/systemd/system/converso
 ### 4.2 Habilitar y Ejecutar el Servicio
 
 ```bash
+sudo systemctl daemon-reload
 sudo systemctl enable conversor.service
 sudo systemctl start conversor.service
 ```
