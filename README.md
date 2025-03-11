@@ -9,7 +9,7 @@ Este documento detalla el funcionamiento del script `conversor.sh`, su configura
 ### 1.1 Instalación de Rclone
 
 ```bash
-curl https://rclone.org/install.sh | sudo bash
+sudo apt install rclone 
 ```
 
 ## 1.2 Crear usuario
