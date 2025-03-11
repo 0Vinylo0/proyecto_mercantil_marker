@@ -4,6 +4,8 @@
 
 Este documento detalla el funcionamiento del script `conversor.sh`, su configuración con `rclone` para trabajar con Dropbox, y la instalación de `Marker` en un entorno virtual de Python.
 
+**IMPORTANTE:** Los archivos con nombres que con tengan espacios, el programa no los interpreta bien, modifica el nombre si contiene espacio.
+
 ## 1. Instalación y Configuración de Rclone con Dropbox
 
 ### 1.1 Instalación de Rclone
