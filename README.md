@@ -41,7 +41,7 @@ Sigue estos pasos:
 5. client\_secret, lo dejamos en blanco
 6. Edit advanced config, lo dejamos en no
 7. Use auto config, si tienes interfaz grafica le daremos que si y si no tiene interfaz grafica le daremos que no
-8. config\_token, pondremos el token generado usando `rclone authorize "dropbox"` en nuestra maquina con interfaz grafica, para ello instlaremos rclone en nuestra maquina con entorno grafico y ejecutaremos el comando, copiamos el resultado y lo pegamos en el server
+8. config\_token, pondremos el token generado usando `rclone authorize "dropbox"` en nuestra maquina con interfaz grafica, para ello instalaremos rclone en nuestra maquina con entorno grafico y ejecutaremos el comando, copiamos el resultado y lo pegamos en el server
 9. Guarda la configuración.
 
 Para verificar la conexión:
