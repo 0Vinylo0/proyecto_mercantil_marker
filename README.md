@@ -10,7 +10,7 @@ Este documento detalla el funcionamiento del script `conversor.sh`, su configura
 
 ```bash
 su - root
-sudo apt install rclone 
+sudo apt install rclone -y
 ```
 
 ## 1.2 Crear usuario
@@ -28,6 +28,7 @@ sudo passwd usuario
 Ejecuta:
 
 ```bash
+su - usuario
 rclone config
 ```
 
@@ -150,7 +151,7 @@ sudo systemctl status converso.service
 ### 5.1 Ver Logs del Servicio
 
 ```bash
-journalctl -u conversor.service -f
+journalctl -xfeu conversor
 ```
 
 ### 5.2 Verificar Conexión con Dropbox
