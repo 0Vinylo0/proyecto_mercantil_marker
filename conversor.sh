@@ -119,13 +119,6 @@ log "🚀 Iniciando servicio de monitoreo de Dropbox..."
 while true; do
     log "🔄 Escaneando cambios en Dropbox..."
     
-    # Verificar conexión a internet antes de intentar acceder a Dropbox
-    if ! ping -c 1 dropbox.com &> /dev/null; then
-        log "⚠️ Sin conexión a internet. Reintentando en 60 segundos..."
-        sleep 60
-        continue
-    fi
-    
     # Revisar si hay archivos en la carpeta de Dropbox con extensiones válidas
     if rclone lsf dropbox:/proyecto-mercantil/input --drive-shared-with-me --include "*.pdf" --include "*.png" --include "*.jpg" --include "*.jpeg" --config "/home/usuario/.config/rclone/rclone.conf" | grep -Ei "\.(pdf|png|jpg|jpeg)$"; then
         procesar_archivos
