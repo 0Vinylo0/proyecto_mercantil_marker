@@ -102,7 +102,6 @@ marker_single --help
 - La estructura en dropbox que se utiliza para el script es:
   ```
   proyecto-mercantil/
-  ├── completed/   # Archivos que ya han sido procesados
   ├── input/       # Archivos pendientes de procesamiento
   └── output/      # Archivos procesados (resultados OCR en HTML)
   ```
